@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prof. Oso Abimbola Oladele</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-I0A3gEN..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="./dad.css">
+
+</head>
+<body>
+  <nav class="navbar">
+    <h2 style="color:white;">Prof. Oso</h2>
+    <button id="burger" class="burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav" class="nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#ministry">Ministry</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+<script>
+  
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  // Toggle menu on burger click
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+
+  // Close menu when any link is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show'); // closes menu
+    });
+  });
+
+</script>
+  <section id="home" class="home">
+    <h1 class="name" style="color: aliceblue;">Prof. Oso Abimbola Oladele</h1>
+    <p style="text-align:center; color: aliceblue;">Animal Nutrition Expert | Professor at FUNAAB | Pastor at GOFAMINT</p>
+    <p style="text-align:center ;color: aliceblue;">Transforming lives through science, faith, and service.</p>
+    <div style="text-align:center;"><a href="tel:+2348037252829"><button>📞 Get in Touch</button></a></div>
+<script>
+  const hero = document.getElementById('home');
+
+  const images = [
+    'download.jpg',
+    'download(1).jpg',
+    'th.jpg',
+    'OIP.jpg',
+    'OIP(1).jpg'
+  ];
+
+  let index = 0;
+
+  function changeBackground() {
+    hero.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  // Initial call
+  changeBackground();
+
+  // Change every 5 seconds
+  setInterval(changeBackground, 5000);
+</script>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="text-align: center;">About Me</h2>
+    <p style="text-align: justify;">Prof Oso, Abimbola Oladele had his undergraduate (B. Agric) and postgraduate (M, Agric and Ph.D) studies from the Department of Animal Nutrition, Federal University of Agriculture, Abeokuta, Nigeria from the field of Monogastric Animal Nutrition. Driven with a goal to resolve nutritional felt problems that compromise sustainable production of animals as safe food for enhanced health and well-being of growing human population, his research interests over the years has been hinged upon the following five (5) thematic areas: Nutritional evaluation of alternative feeds and feedstuffs for improved poultry and swine production, gut modification strategies geared towards improved growth, well being and reduced odour in poultry production, the use of phytogenic plants as replacement for in-feed antibiotic growth promoters, employing various nutritional strategies to ameliorate the effect of feed contaminants in monogastric animal nutrition and effect of dietary manipulations on nutrition-related gene expression.
+
+He is a member of several Professional bodies and has held several administrative positions having served as Head of Department of Animal Nutrition and two terms deputy Dean (Sub-Dean) of the College of Animal Science and Livestock Production.He's currently the <strong>Dean of the College of Animal Science and Livestock Production</strong> He has been involved in teaching, research and mentoring of students from both undergraduate and graduate students for the past 17 years. He has a significant record of scientific publications based on the various findings generated from his research and collaborated positively with both locally and international scientists in an interdisciplinary, diverse, and multicultural environment.</p>
+  </section>
+
+  <section id="expertise">
+    <h2 style="text-align: center;">My Areas of Expertise</h2>
+    <ul>
+      <li>Ruminant and Non-Ruminant Nutrition</li>
+      <li>Feed Formulation and Evaluation</li>
+      <li>Pasture and Forage Management</li>
+      <li>Livestock Production Systems</li>
+      <li>Academic Research & Mentorship</li>
+      <li>Faith-Based Leadership & Counseling</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2 style="text-align: center;">Selected Publications</h2>
+    <ul>
+      <li style="text-align: justify;"> Oso, A. O, Bamgbose, A.M., Isah, O.A., Olatunji, J.E.N., Mabadeje, A.T., Alade, A.A., and Oni, A.O. (2006). Performance of weaner rabbits fed rice milling waste-based diet. Journal of Animal and Veterinary Advances. 5, 836-838. <a href="http://wwww.medwellonline.net"> wwww.medwellonline.net</a></li>
+      <li style="text-align: justify;">Oso, A. O, R. Faboro, O. Isah, A. O. Oni, A. M. Bamgbose, P. Dele (2010). Potential of Bread Fruit (Artocarpus Altilis) An Ecologically Forest Based Feed Resource In Rabbit Nutrition. Tropical and Sub tropical Agroecosystems. 12: 99-108. <a href="www.redalyc.org/pdf/939/93913074010.pdf">www.redalyc.org/pdf</a></li>
+      <li style="text-align: justify;">Oso, A. O, A. Olusoga Oso, A. M. Bamgbose and D. Eruvbetine (2010) Utilization of unpeeled cassava (manihot esculenta) root meal in diets of weaner rabbits. Livestock Science 127: 192-196.<a href="http://www.journals.elsevierhealth.com/periodicals/livsci/article/S1871-1413(09)00323-0a">www.journals.elsevierhealth</li>
+    </ul>
+    <p><a href="https://funaab.edu.ng/staff/oso-abimbola-oladele/" target="_blank">View All Publications</a></p>
+  </section>
+
+  <section id="ministry">
+    <h2 style="text-align: center;">My Calling</h2>
+    <p style="text-align: center;">I am a devoted pastor at GOFAMINT where I minister the Word of God...</p>
+  </section>
+
+<section id="gallery">
+  <h2 style="text-align: center;">Gallery</h2>
+  <div class="gallery-wrapper">
+    <button class="scroll-btn left" onclick="scrollGallery(-1)">&#10094;</button>
+
+    <div class="gallery-scroll" id="galleryScroll">
+       <img src="./DSC07778.jpg" alt="50th Birthday PhotoShoot" onclick="openModal(this)" />
+      <img src="./DSC07715.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+      <img src="./DSC07720.jpg" alt="50th Birthday PhotoShoot" onclick="openModal(this)" />
+      <img src="./DSC07722.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)" />
+       <img src="./DSC07858.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+      <img src="./DSC07853.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+      <img src="./DSC07851.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+      <img src="./DSC07847.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+       <img src="./DSC07830.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+      <img src="./DSC07829.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+      <img src="./DSC07824.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+      <img src="./DSC07818.jpg" alt="50th Birthday PhotoShoot"  onclick="openModal(this)"/>
+    </div>
+       
+<!-- Modal (Hidden by default) -->
+<div id="imageModal" class="modal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Zoomed View">
+    <p id="modalCaption" class="modal-caption"></p>
+  </div>
+</div>
+      
+     
+<script>
+  function openModal(image) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const caption = document.getElementById("modalCaption");
+
+    modal.style.display = "block";
+    modalImg.src = image.src;
+    caption.textContent = image.alt;
+  }
+
+  function closeModal(event) {
+    if (event.target.id === "imageModal") {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  }
+</script>
+
+    <button class="scroll-btn right" onclick="scrollGallery(1)">&#10095;</button>
+  </div>
+</section>
+
+<script>
+  function scrollGallery(direction) {
+  const gallery = document.getElementById('galleryScroll');
+  const scrollAmount = gallery.clientWidth * 0.6; // Adjust scroll amount if needed
+  gallery.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+</script>
+  <section id="contact">
+    <h2 style="text-align: center;">Contact Me</h2>
+    <p>Email: <a href="mailto:drosoann@yahoo.com">drosoann@yahoo.com</a></p>
+    <p>Phone: +234 8037252829</p>
+    <p>Office: Department of Animal Nutrition, FUNAAB</p>
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <a href="mailto:drosoann@yahoo.com">drosoann@yahoo.com</a> |
+      <a href="tel:+2348037252829">+234 8037252829</a>
+    </div>
+    <div>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/professor-abimbola-oso-5b8a444a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <small>&copy; <span id="year"></span> Prof. Oso Abimbola Oladele. All rights reserved.</small>
+  </footer>
+
+  <script>
+    
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks! Your message has been sent ✅');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
