@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prof. Oso Abimbola Oladele</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-I0A3gEN..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #014421;
+      line-height: 1.6;
+    }
+
+    header, section, footer {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    nav.navbar {
+      background: #014421;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      color: #a1e6b0;
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .burger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    #nav.show {
+      display: flex;
+      flex-direction: column;
+      background: #014421;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 60%;
+      padding: 1rem;
+    }
+
+    h1.name {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      background: #f0fff0;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      margin-left: 1.5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background: #014421;
+      color: white;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #026633;
+    }
+
+    footer.footer {
+      background: #014421;
+      color: white;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #a1e6b0;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+      }
+      .burger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h2 style="color:white;">Prof. Oso</h2>
+    <button id="burger" class="burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav" class="nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#ministry">Ministry</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+<script>
+  
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  // Toggle menu on burger click
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+
+  // Close menu when any link is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show'); // closes menu
+    });
+  });
+
+</script>
+  <section id="home" class="home">
+    <h1 class="name" style="color: aliceblue;">Prof. Oso Abimbola Oladele</h1>
+    <p style="text-align:center; color: aliceblue;">Animal Nutrition Expert | Professor at FUNAAB | Pastor at GOFAMINT</p>
+    <p style="text-align:center ;color: aliceblue;">Transforming lives through science, faith, and service.</p>
+    <div style="text-align:center;"><a href="tel:+2348037252829"><button>📞 Get in Touch</button></a></div>
+<script>
+  const hero = document.getElementById('home');
+
+  const images = [
+    'download.jpg',
+    'download(1).jpg',
+    'th.jpg',
+    'OIP.jpg',
+    'OIP(1).jpg'
+  ];
+
+  let index = 0;
+
+  function changeBackground() {
+    hero.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  // Initial call
+  changeBackground();
+
+  // Change every 5 seconds
+  setInterval(changeBackground, 5000);
+</script>
+
+     
+
+      <style>
+      .home{
+        background-image: url(download.jpg);
+         /* background-size: cover; */
+       
+       margin-top: 2%;
+       background-color: rgba(0, 68, 33, 0.6);
+  padding: 2rem;
+  border-radius: 1px;
+  color: white;
+ 
+  transition: background-image 1s ease-in-out;
+      }
+      
+
+
+      .home-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-images img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.home-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .home-images img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-images img {
+    width: 100px;
+  }
+}</style>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="text-align: center;">About Me</h2>
+    <p>Prof Oso, Abimbola Oladele had his undergraduate (B. Agric) and postgraduate (M, Agric and Ph.D) studies from the Department of Animal Nutrition, Federal University of Agriculture, Abeokuta, Nigeria from the field of Monogastric Animal Nutrition. Driven with a goal to resolve nutritional felt problems that compromise sustainable production of animals as safe food for enhanced health and well-being of growing human population, his research interests over the years has been hinged upon the following five (5) thematic areas: Nutritional evaluation of alternative feeds and feedstuffs for improved poultry and swine production, gut modification strategies geared towards improved growth, well being and reduced odour in poultry production, the use of phytogenic plants as replacement for in-feed antibiotic growth promoters, employing various nutritional strategies to ameliorate the effect of feed contaminants in monogastric animal nutrition and effect of dietary manipulations on nutrition-related gene expression.
+
+He is a member of several Professional bodies and has held several administrative positions having served as Head of Department of Animal Nutrition and two terms deputy Dean (Sub-Dean) of the College of Animal Science and Livestock Production.He's currently the <strong>Dean of the College of Animal Science and Livestock Production</strong> He has been involved in teaching, research and mentoring of students from both undergraduate and graduate students for the past 17 years. He has a significant record of scientific publications based on the various findings generated from his research and collaborated positively with both locally and international scientists in an interdisciplinary, diverse, and multicultural environment.</p>
+  </section>
+
+  <section id="expertise">
+    <h2 style="text-align: center;">My Areas of Expertise</h2>
+    <ul>
+      <li>Ruminant and Non-Ruminant Nutrition</li>
+      <li>Feed Formulation and Evaluation</li>
+      <li>Pasture and Forage Management</li>
+      <li>Livestock Production Systems</li>
+      <li>Academic Research & Mentorship</li>
+      <li>Faith-Based Leadership & Counseling</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2 style="text-align: center;">Selected Publications</h2>
+    <ul>
+      <li> Oso, A. O, Bamgbose, A.M., Isah, O.A., Olatunji, J.E.N., Mabadeje, A.T., Alade, A.A., and Oni, A.O. (2006). Performance of weaner rabbits fed rice milling waste-based diet. Journal of Animal and Veterinary Advances. 5, 836-838. <a href="http://wwww.medwellonline.net"> wwww.medwellonline.net</a></li>
+      <li>Oso, A. O, R. Faboro, O. Isah, A. O. Oni, A. M. Bamgbose, P. Dele (2010). Potential of Bread Fruit (Artocarpus Altilis) An Ecologically Forest Based Feed Resource In Rabbit Nutrition. Tropical and Sub tropical Agroecosystems. 12: 99-108. <a href="www.redalyc.org/pdf/939/93913074010.pdf">www.redalyc.org/pdf</a></li>
+      <li>Oso, A. O, A. Olusoga Oso, A. M. Bamgbose and D. Eruvbetine (2010) Utilization of unpeeled cassava (manihot esculenta) root meal in diets of weaner rabbits. Livestock Science 127: 192-196.<a href="http://www.journals.elsevierhealth.com/periodicals/livsci/article/S1871-1413(09)00323-0a">www.journals.elsevierhealth</li>
+    </ul>
+    <p><a href="https://funaab.edu.ng/staff/oso-abimbola-oladele/" target="_blank">View All Publications</a></p>
+  </section>
+
+  <section id="ministry">
+    <h2 style="text-align: center;">My Calling</h2>
+    <p>I am a devoted pastor at GOFAMINT where I minister the Word of God...</p>
+  </section>
+
+<section id="gallery">
+  <h2 style="text-align: center;">Gallery</h2>
+  <div class="gallery-wrapper">
+    <button class="scroll-btn left" onclick="scrollGallery(-1)">&#10094;</button>
+
+    <div class="gallery-scroll" id="galleryScroll">
+       <img src="./DSC07778.jpg" alt="Speaking at a Conference" onclick="openModal(this)" />
+      <img src="./DSC07715.jpg" alt="With Family"  onclick="openModal(this)"/>
+      <img src="./DSC07720.jpg" alt="Ministry Outreach" onclick="openModal(this)" />
+      <img src="./DSC07722.jpg" alt="In Research Laboratory"  onclick="openModal(this)" />
+       <img src="./DSC07858.jpg" alt="Speaking at a Conference"  onclick="openModal(this)"/>
+      <img src="./DSC07853.jpg" alt="With Family"  onclick="openModal(this)"/>
+      <img src="./DSC07851.jpg" alt="Ministry Outreach"  onclick="openModal(this)"/>
+      <img src="./DSC07847.jpg" alt="In Research Laboratory"  onclick="openModal(this)"/>
+       <img src="./DSC07830.jpg" alt="Speaking at a Conference"  onclick="openModal(this)"/>
+      <img src="./DSC07829.jpg" alt="With Family"  onclick="openModal(this)"/>
+      <img src="./DSC07824.jpg" alt="Ministry Outreach"  onclick="openModal(this)"/>
+      <img src="./DSC07818.jpg" alt="In Research Laboratory"  onclick="openModal(this)"/>
+    </div>
+       
+<!-- Modal (Hidden by default) -->
+<div id="imageModal" class="modal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Zoomed View">
+    <p id="modalCaption" class="modal-caption"></p>
+  </div>
+</div>
+      
+     
+<script>
+  function openModal(image) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const caption = document.getElementById("modalCaption");
+
+    modal.style.display = "block";
+    modalImg.src = image.src;
+    caption.textContent = image.alt;
+  }
+
+  function closeModal(event) {
+    if (event.target.id === "imageModal") {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  }
+</script>
+<style>
+  .zoomable-image {
+  width: 220px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: 5% auto;
+  background: white;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  padding: 1rem;
+  animation: zoomIn 0.3s ease;
+}
+
+.modal-content img {
+  /* width: 100%; */
+  height: auto;
+  border-radius: 8px;
+
+   max-height: 70vh;  /* 90% of the viewport height */
+  max-width: 100%;
+ 
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-caption {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #014421;
+  font-size: 1.1rem;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .zoomable-image {
+    width: 100%;
+  }
+}
+</style>
+    <button class="scroll-btn right" onclick="scrollGallery(1)">&#10095;</button>
+  </div>
+</section>
+<style>
+  .gallery-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 1rem;
+  background: #f0fff0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.gallery-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
+
+.gallery-scroll img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-scroll img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #014421;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.scroll-btn:hover {
+  background: #026633;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery-scroll img {
+    width: 180px;
+  }
+
+  .scroll-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-scroll img {
+    width: 130px;
+  }
+}
+</style>
+<script>
+  function scrollGallery(direction) {
+  const gallery = document.getElementById('galleryScroll');
+  const scrollAmount = gallery.clientWidth * 0.6; // Adjust scroll amount if needed
+  gallery.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+</script>
+  <section id="contact">
+    <h2 style="text-align: center;">Contact Me</h2>
+    <p>Email: <a href="mailto:drosoann@yahoo.com">drosoann@yahoo.com</a></p>
+    <p>Phone: +234 8037252829</p>
+    <p>Office: Department of Animal Nutrition, FUNAAB</p>
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <a href="mailto:drosoann@yahoo.com">drosoann@yahoo.com</a> |
+      <a href="tel:+2348037252829">+234 8037252829</a>
+    </div>
+    <div>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/professor-abimbola-oso-5b8a444a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <small>&copy; <span id="year"></span> Prof. Oso Abimbola Oladele. All rights reserved.</small>
+  </footer>
+
+  <script>
+    
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks! Your message has been sent ✅');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
